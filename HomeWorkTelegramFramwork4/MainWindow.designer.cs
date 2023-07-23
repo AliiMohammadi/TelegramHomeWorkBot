@@ -42,32 +42,33 @@ namespace TelegramHomeWork
             // 
             // Tokentext
             // 
-            this.Tokentext.Location = new System.Drawing.Point(10, 62);
+            this.Tokentext.Location = new System.Drawing.Point(20, 62);
             this.Tokentext.Name = "Tokentext";
-            this.Tokentext.Size = new System.Drawing.Size(323, 20);
+            this.Tokentext.Size = new System.Drawing.Size(367, 20);
             this.Tokentext.TabIndex = 0;
             // 
             // AdminSerialtext
             // 
-            this.AdminSerialtext.Location = new System.Drawing.Point(10, 110);
+            this.AdminSerialtext.Location = new System.Drawing.Point(20, 110);
             this.AdminSerialtext.Name = "AdminSerialtext";
-            this.AdminSerialtext.Size = new System.Drawing.Size(323, 20);
+            this.AdminSerialtext.Size = new System.Drawing.Size(367, 20);
             this.AdminSerialtext.TabIndex = 1;
             // 
             // Descriptiontext
             // 
-            this.Descriptiontext.Location = new System.Drawing.Point(10, 148);
+            this.Descriptiontext.Location = new System.Drawing.Point(20, 148);
             this.Descriptiontext.Multiline = true;
             this.Descriptiontext.Name = "Descriptiontext";
-            this.Descriptiontext.Size = new System.Drawing.Size(323, 97);
+            this.Descriptiontext.Size = new System.Drawing.Size(367, 97);
             this.Descriptiontext.TabIndex = 2;
+            this.Descriptiontext.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // ActiveButton
             // 
             this.ActiveButton.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.ActiveButton.Location = new System.Drawing.Point(75, 263);
+            this.ActiveButton.Location = new System.Drawing.Point(106, 251);
             this.ActiveButton.Name = "ActiveButton";
-            this.ActiveButton.Size = new System.Drawing.Size(185, 56);
+            this.ActiveButton.Size = new System.Drawing.Size(185, 76);
             this.ActiveButton.TabIndex = 3;
             this.ActiveButton.Text = "فعال کردن";
             this.ActiveButton.UseVisualStyleBackColor = true;
@@ -76,7 +77,7 @@ namespace TelegramHomeWork
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(304, 46);
+            this.label1.Location = new System.Drawing.Point(356, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 13);
             this.label1.TabIndex = 4;
@@ -85,16 +86,16 @@ namespace TelegramHomeWork
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(255, 94);
+            this.label2.Location = new System.Drawing.Point(257, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.Size = new System.Drawing.Size(130, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Adming chat id";
+            this.label2.Text = "ای دی دریافت کننده تمرین";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(261, 133);
+            this.label3.Location = new System.Drawing.Point(316, 132);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 13);
             this.label3.TabIndex = 6;
@@ -104,7 +105,7 @@ namespace TelegramHomeWork
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label4.Location = new System.Drawing.Point(190, 17);
+            this.label4.Location = new System.Drawing.Point(221, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 21);
             this.label4.TabIndex = 7;
@@ -114,7 +115,7 @@ namespace TelegramHomeWork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 339);
+            this.ClientSize = new System.Drawing.Size(399, 339);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

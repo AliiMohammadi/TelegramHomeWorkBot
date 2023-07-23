@@ -97,6 +97,42 @@ namespace TelegramLean
         {
             return Token;
         }
+
+        /// <summary>
+        /// ارسال پیغام به چت
+        /// </summary>
+        /// <param name="ChatID"></param>
+        /// <param name="message"></param>
+        /// <param name="rkm"></param>
+        public async void SendMessage(long ChatID,string message)
+        {
+            try
+            {
+                await TelBotClient.SendTextMessageAsync(ChatID, message);
+
+            }
+            catch (Exception) { 
+                throw;
+            }
+        }
+        /// <summary>
+        /// ارسال پیغام به چت
+        /// </summary>
+        /// <param name="ChatID"></param>
+        /// <param name="message"></param>
+        /// <param name="rkm"></param>
+        public async void SendMessage(long ChatID, string message,int replymessage)
+        {
+            try
+            {
+                await TelBotClient.SendTextMessageAsync(ChatID, message, null, null,null,null,null,null, replymessage);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         /// <summary>
         /// ارسال پیغام به چت
         /// </summary>
@@ -120,24 +156,25 @@ namespace TelegramLean
         /// <param name="ChatID"></param>
         /// <param name="message"></param>
         /// <param name="rkm"></param>
-        public async void SendMessage(long ChatID,string message)
+        public async void SendMessage(long ChatID, string message,int replymessgae, ReplyKeyboardMarkup rkm)
         {
             try
             {
-                await TelBotClient.SendTextMessageAsync(ChatID, message);
-
+                await TelBotClient.SendTextMessageAsync(ChatID, message, null, null, null, null, null, null, replymessgae, null, rkm);
             }
-            catch (Exception) { 
+            catch (Exception)
+            {
                 throw;
             }
         }
+
         /// <summary>
         /// فروارد پیغام
         /// </summary>
         /// <param name="ChatID"></param>
         /// <param name="message"></param>
         /// <param name="rkm"></param>
-        public async void ForwardMessage(long chatid, long Fromchatid, Telegram.Bot.Types.Message message)
+        public async void ForwardMessage(long chatid, long Fromchatid, Message message)
         {
             try
             {
@@ -150,6 +187,7 @@ namespace TelegramLean
                 throw;
             }
         }
+
         /// <summary>
         /// مشخص کردن دکمه های اماده چت بات
         /// </summary>

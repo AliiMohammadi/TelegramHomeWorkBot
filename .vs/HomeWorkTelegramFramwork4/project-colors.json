@@ -5,7 +5,12 @@
       "ProjectGuid": "080419f5-9f77-4f12-98fd-ccc05b745d9b",
       "DisplayName": "HomeWorkTelegramFramwork4",
       "ColorIndex": 0
+    },
+    "fe15e351-cb2f-41ca-906b-bf4930ed3b11": {
+      "ProjectGuid": "fe15e351-cb2f-41ca-906b-bf4930ed3b11",
+      "DisplayName": "HomeWorkBotTest",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

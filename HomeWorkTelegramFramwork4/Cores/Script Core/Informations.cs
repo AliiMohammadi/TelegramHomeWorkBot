@@ -1,4 +1,5 @@
-﻿using System;
+﻿using TelegramHomeWorkBot.Script_Core;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -12,7 +13,7 @@ namespace TelegramHomeWorkBot.Script_Core
         /// <summary>
         /// شماره سریال , شماره چت سرگروه با بات هستش که باید اینجا قرار بگیره
         /// </summary>
-        public long AdminSerial { get; set; }
+        public string AdminUserName { get; set; }
         /// <summary>
         /// اطلاعات , متنی است که هنگامی که کاربر روی دکمه اطلاعات درس کلیک میکند به کاربر میدهد
         /// </summary>
@@ -24,12 +25,14 @@ namespace TelegramHomeWorkBot.Script_Core
         /// <summary>
         /// لیست افرادی که تابه حال از بات استفاده کرده اند
         /// </summary>
-        public List<string> Users { get; set; }
+        public List<TelUser> Users;
 
         public Informations()
         {
             Description = "";
             Token = "";
+
+            Users = new List<TelUser>();
         }
 
         /// <summary>

@@ -366,7 +366,7 @@
 		max_height 	28350
 		max_width  	21600
 		origin_x   	0
-		origin_y   	734
+		origin_y   	494
 		items      	(list diagram_item_list
 		    (object ClassView "Class" "Logical View::TelegramBot" @1
 			ShowCompartmentStereotypes 	TRUE
@@ -687,7 +687,7 @@
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(1779, 2328)
+			location   	(1828, 2349)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -699,7 +699,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@9
-			    location   	(1551, 2197)
+			    location   	(1600, 2218)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	456
@@ -711,7 +711,7 @@
 			quidu      	"42A0C481030D"
 			compartment 	(object Compartment
 			    Parent_View 	@9
-			    location   	(1551, 2258)
+			    location   	(1600, 2279)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -770,7 +770,7 @@
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(3808, 2579)
+			location   	(3806, 2295)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -782,7 +782,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@13
-			    location   	(3518, 2528)
+			    location   	(3516, 2244)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	580
@@ -803,8 +803,8 @@
 			client     	@2
 			supplier   	@13
 			vertices   	(list Points
-			    (2963, 1669)
-			    (3748, 2515))
+			    (3025, 1655)
+			    (3727, 2231))
 			line_style 	0)
 		    (object UsesView "" @15
 			stereotype 	TRUE
@@ -813,11 +813,11 @@
 			client     	@1
 			supplier   	@9
 			vertices   	(list Points
-			    (2359, 2561)
-			    (2016, 2423))
+			    (2359, 2562)
+			    (2065, 2444))
 			line_style 	0)
 		    (object CategoryView "Logical View::Telegram.Bot" @16
-			location   	(2645, 3666)
+			location   	(2667, 3756)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -829,7 +829,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@16
-			    location   	(2501, 3582)
+			    location   	(2523, 3672)
 			    fill_color 	13434879
 			    nlines     	2
 			    max_width  	288
@@ -848,9 +848,78 @@
 			client     	@1
 			supplier   	@16
 			vertices   	(list Points
-			    (2657, 3207)
-			    (2648, 3521))
-			line_style 	0)))))
+			    (2669, 3207)
+			    (2667, 3611))
+			line_style 	0)
+		    (object NoteView @18
+			location   	(3320, 3801)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@18
+			    location   	(3026, 3676)
+			    fill_color 	13434879
+			    nlines     	5
+			    max_width  	552
+			    justify    	1
+			    label      	"Telegram.bot is a package from NuGet. Library for creating telegram bot")
+			line_color 	3342489
+			fill_color 	13434879
+			width      	612
+			height     	263)
+		    (object NoteView @19
+			location   	(1941, 2098)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@19
+			    location   	(1628, 2026)
+			    fill_color 	13434879
+			    nlines     	2
+			    max_width  	591
+			    justify    	1
+			    label      	"TelegramLean core is a high level library for telegram bot requests.")
+			line_color 	3342489
+			fill_color 	13434879
+			width      	651
+			height     	157)
+		    (object NoteView @20
+			location   	(1556, 1279)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@20
+			    location   	(1121, 1192)
+			    fill_color 	13434879
+			    nlines     	3
+			    max_width  	834
+			    justify    	1
+			    label      	"Script core is kind of codes we need to excute for our work.")
+			line_color 	3342489
+			fill_color 	13434879
+			width      	894
+			height     	187)))))
     root_subsystem 	(object SubSystem "Component View"
 	quid       	"42A0BDF8014B"
 	physical_models 	(list unit_reference_list)

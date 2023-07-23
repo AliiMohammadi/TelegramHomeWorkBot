@@ -38,13 +38,14 @@ namespace TelegramHomeWork
             if (!Script.Bot.IsActive)
             {
                 Script.info.Token = Tokentext.Text;
-                Script.info.AdminSerial = long.Parse(AdminSerialtext.Text);
+                Script.info.AdminUserName = AdminSerialtext.Text;
                 Script.info.Description = Descriptiontext.Text;
 
                 Informations.SaveInformation(Script.info);
 
                 Script.Initialaize();
                 Script.Bot.SetActive(true);
+
 
                 ActiveMode();
             }else
@@ -63,7 +64,7 @@ namespace TelegramHomeWork
 
             Tokentext.Text = info.Token;
             Descriptiontext.Text = info.Description;
-            AdminSerialtext.Text = info.AdminSerial.ToString();
+            AdminSerialtext.Text = info.AdminUserName;
         }
 
         void ActiveMode()
