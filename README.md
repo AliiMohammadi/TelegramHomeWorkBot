@@ -1,5 +1,5 @@
 # Telegram Home Work Bot
-An telegram bot for professors or professor assistances to collect home works from students.
+A telegram bot for professors or professor assistance to collect home works from students.
 With this bot students can send their works to the bot and the bot will forward that to the person.
 
 # How it works

@@ -120,6 +120,7 @@ namespace TelegramHomeWorkBot.Script_Core
             Adminchatid = GetChatIdOfAdmin();
 
         }
+
         static void HomeWorkSendRequest(Message homework)
         {
             try
@@ -142,10 +143,9 @@ namespace TelegramHomeWorkBot.Script_Core
         {
             Bot.SendMessage(chatid, "سلام.\n این بات برای ارسال تمرینات دانشجویان است.\n تمرینات شما باید در قالب فایل یا تصویر باشد. \n در این صورت است که تمرین شما ارسال میشود. \n شماره چت شما: " + chatid + "\n توسعه بات توسط @Mohamadyali", Bot.ReplyKey);
         }
-
-        //source code = https://github.com/AliiMohammadi/TelegramHomeWorkBot
         static void SourceCodeRequest(long chatid)
         {
+            //source code = https://github.com/AliiMohammadi/TelegramHomeWorkBot
             Bot.SendMessage(chatid, "سورس کد این بات: \r\n https://github.com/AliiMohammadi/TelegramHomeWorkBot", Bot.ReplyKey);
         }
 

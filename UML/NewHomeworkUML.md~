@@ -187,7 +187,7 @@
 			quid       	"42A0CF1D038A")
 		    (object ClassAttribute "IsActive"
 			quid       	"42A0BE9601E4")))
-	    (object Class "Script"
+	    (object Class "Scrips"
 		quid       	"42A0C9420271"
 		used_nodes 	(list uses_relationship_list
 		    (object Uses_Relationship
@@ -239,26 +239,6 @@
 			uid        	0)
 		    (object Operation "RigesterNewUser"
 			quid       	"42A0BFF30281"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "HomeWorkSendRequest"
-			quid       	"42A0C01A031D"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "StudyInformationRequest"
-			quid       	"42A0C0270167"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "ChatInformationRequest"
-			quid       	"42A0C03102EE"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "SourceCodeRequest"
-			quid       	"42A0C03F004E"
 			concurrency 	"Sequential"
 			opExportControl 	"Public"
 			uid        	0)
@@ -327,7 +307,7 @@
 		used_nodes 	(list uses_relationship_list
 		    (object Uses_Relationship
 			quid       	"42A0C68F032D"
-			supplier   	"Logical View::Script"
+			supplier   	"Logical View::Scrips"
 			quidu      	"42A0C9420271"))
 		operations 	(list Operations
 		    (object Operation "ActiveButtonClick"
@@ -378,6 +358,29 @@
 			quid       	"42A0C0DD02FE")
 		    (object ClassAttribute "Chatid"
 			quid       	"42A0C0E2033C")))
+	    (object Class "Proposals"
+		quid       	"42A0BE4D0290"
+		operations 	(list Operations
+		    (object Operation "HomeWorkSendRequest"
+			quid       	"42A0BE56033C"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "StudyInformationRequest"
+			quid       	"42A0BE56034B"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "ChatInformationRequest"
+			quid       	"42A0BE56035B"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "SourceCodeRequest"
+			quid       	"42A0BE56035C"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)))
 	    (object Class_Category "NewPackage"
 		quid       	"42A0CEBC0252"
 		exportControl 	"Public"
@@ -404,8 +407,8 @@
 		zoom       	100
 		max_height 	28350
 		max_width  	21600
-		origin_x   	2057
-		origin_y   	494
+		origin_x   	0
+		origin_y   	0
 		items      	(list diagram_item_list
 		    (object ClassView "Class" "Logical View::TelegramBot" @1
 			ShowCompartmentStereotypes 	TRUE
@@ -455,11 +458,11 @@
 			height     	1036
 			annotation 	8
 			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::Script" @2
+		    (object ClassView "Class" "Logical View::Scrips" @2
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(2759, 1391)
+			location   	(2750, 1397)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -471,19 +474,19 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@2
-			    location   	(2458, 960)
+			    location   	(2449, 1066)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	602
 			    justify    	0
-			    label      	"Script")
+			    label      	"Scrips")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"42A0C9420271"
 			compartment 	(object Compartment
 			    Parent_View 	@2
-			    location   	(2458, 1021)
+			    location   	(2449, 1127)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -496,15 +499,15 @@
 			    icon_style 	"Icon"
 			    fill_color 	13434879
 			    anchor     	2
-			    nlines     	16
+			    nlines     	12
 			    max_width  	600
 			    justify    	1)
 			width      	620
-			height     	886
+			height     	686
 			annotation 	8
 			autoResize 	TRUE)
 		    (object Label @3
-			location   	(2562, 1072)
+			location   	(2644, 907)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -684,8 +687,8 @@
 			client     	@2
 			supplier   	@1
 			vertices   	(list Points
-			    (2728, 1834)
-			    (2705, 2170))
+			    (2728, 1740)
+			    (2702, 2170))
 			line_style 	0)
 		    (object UsesView "" @9
 			stereotype 	TRUE
@@ -694,8 +697,8 @@
 			client     	@5
 			supplier   	@2
 			vertices   	(list Points
-			    (2819, 616)
-			    (2793, 947))
+			    (2818, 616)
+			    (2779, 1053))
 			line_style 	0)
 		    (object ClassView "Class" "Logical View::SAVEANDRETRIVE MODULE" @10
 			ShowCompartmentStereotypes 	TRUE
@@ -734,7 +737,7 @@
 			client     	@2
 			supplier   	@10
 			vertices   	(list Points
-			    (3069, 1659)
+			    (3060, 1660)
 			    (3732, 2231))
 			line_style 	0)
 		    (object UsesView "" @12
@@ -897,6 +900,54 @@
 			    justify    	1)
 			width      	248
 			height     	236
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Proposals" @19
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(3636, 1178)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@19
+			    location   	(3378, 1022)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	516
+			    justify    	0
+			    label      	"Proposals")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"42A0BE4D0290"
+			compartment 	(object Compartment
+			    Parent_View 	@19
+			    location   	(3378, 1083)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	5
+			    max_width  	513
+			    justify    	1)
+			width      	534
+			height     	336
 			annotation 	8
 			autoResize 	TRUE)))))
     root_subsystem 	(object SubSystem "Component View"
