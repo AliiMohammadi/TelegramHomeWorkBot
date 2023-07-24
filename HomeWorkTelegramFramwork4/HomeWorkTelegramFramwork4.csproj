@@ -67,6 +67,9 @@
     <Compile Include="Cores\SaveAndRetrieve Core\JSonSingleObject\SaveSystem.cs" />
     <Compile Include="Cores\SaveAndRetrieve Core\JSonSingleObject\SimpleJson.cs" />
     <Compile Include="Cores\Script Core\Informations.cs" />
+    <Compile Include="Cores\Script Core\ListBook.cs" />
+    <Compile Include="Cores\Script Core\LocalData.cs" />
+    <Compile Include="Cores\Script Core\Proposals.cs" />
     <Compile Include="Cores\Script Core\Script.cs" />
     <Compile Include="Cores\Script Core\TelUser.cs" />
     <Compile Include="Cores\Telegram Lean Core\TelBotInfo.cs" />

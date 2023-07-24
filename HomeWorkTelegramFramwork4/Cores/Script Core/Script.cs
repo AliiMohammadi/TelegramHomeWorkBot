@@ -20,7 +20,7 @@ namespace TelegramHomeWorkBot.Script_Core
         /// </summary>
         public static TelegramBot Bot = new TelegramBot("");
 
-        static long Adminchatid = -1;
+        public static long Adminchatid = -1;
 
         /// <summary>
         /// فقط یک بار خوانده شود.
@@ -63,11 +63,11 @@ namespace TelegramHomeWorkBot.Script_Core
             try
             {
                 if (update.Message.Text == "اطلاعات درس")
-                    StudyInformationRequest(update.Message.Chat.Id);
+                    Proposals.StudyInformationRequest(update.Message.Chat.Id);
                 else if (update.Message.Text == "/start")
-                    ChatInformationRequest(update.Message.Chat.Id);
+                    Proposals.ChatInformationRequest(update.Message.Chat.Id);
                 else if (update.Message.Text == "/code")
-                    SourceCodeRequest(update.Message.Chat.Id);
+                    Proposals.SourceCodeRequest(update.Message.Chat.Id);
                 else
                     Bot.SendMessage(update.Message.Chat.Id, ".تمرین رو به صورت فایل یکجا بفرستید. متن قابل قبول نیست", Bot.ReplyKey);
             }
@@ -80,7 +80,7 @@ namespace TelegramHomeWorkBot.Script_Core
         {
             try
             {
-                HomeWorkSendRequest(update.Message);
+                Proposals.HomeWorkSendRequest(update.Message);
             }
             catch (Exception e)
             {
@@ -94,7 +94,7 @@ namespace TelegramHomeWorkBot.Script_Core
                 if (Adminchatid == -1)
                     System.Windows.Forms.MessageBox.Show("اخطار: ای دی شما در بات ثبت نام نشده. برای حل این مشکل لطفا به بات بروید و دستور /start را وارد کنید تا ثبت نام شوید.");
 
-                HomeWorkSendRequest( update.Message);
+                Proposals.HomeWorkSendRequest( update.Message);
 
             }
             catch (Exception e)
@@ -119,34 +119,6 @@ namespace TelegramHomeWorkBot.Script_Core
             Informations.SaveInformation(info);
             Adminchatid = GetChatIdOfAdmin();
 
-        }
-
-        static void HomeWorkSendRequest(Message homework)
-        {
-            try
-            {
-                Bot.SendMessage(Adminchatid, $"تمرین ارسال شده از طرف: @{homework.Chat.Username} در زمان: {homework.Date}", Bot.ReplyKey);
-                Bot.ForwardMessage(Adminchatid, homework.Chat.Id, homework);
-                Bot.SendMessage(homework.Chat.Id, $"تمرین شما ثبت شد.", Bot.ReplyKey);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
-        }
-        static void StudyInformationRequest(long chatid)
-        {
-            Bot.SendMessage(chatid, info.Description, Bot.ReplyKey);
-        }
-        static void ChatInformationRequest(long chatid)
-        {
-            Bot.SendMessage(chatid, "سلام.\n این بات برای ارسال تمرینات دانشجویان است.\n تمرینات شما باید در قالب فایل یا تصویر باشد. \n در این صورت است که تمرین شما ارسال میشود. \n شماره چت شما: " + chatid + "\n توسعه بات توسط @Mohamadyali", Bot.ReplyKey);
-        }
-        static void SourceCodeRequest(long chatid)
-        {
-            //source code = https://github.com/AliiMohammadi/TelegramHomeWorkBot
-            Bot.SendMessage(chatid, "سورس کد این بات: \r\n https://github.com/AliiMohammadi/TelegramHomeWorkBot", Bot.ReplyKey);
         }
 
         /// <summary>

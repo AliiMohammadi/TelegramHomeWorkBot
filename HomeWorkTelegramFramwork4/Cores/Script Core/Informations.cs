@@ -8,25 +8,8 @@ namespace TelegramHomeWorkBot.Script_Core
     /// <summary>
     /// کلاس اطلاعات قابل تنظیم توسط سرگروه 
     /// </summary>
-    internal class Informations
+    internal class Informations : LocalData
     {
-        /// <summary>
-        /// شماره سریال , شماره چت سرگروه با بات هستش که باید اینجا قرار بگیره
-        /// </summary>
-        public string AdminUserName { get; set; }
-        /// <summary>
-        /// اطلاعات , متنی است که هنگامی که کاربر روی دکمه اطلاعات درس کلیک میکند به کاربر میدهد
-        /// </summary>
-        public string Description { get; set; }
-        /// <summary>
-        /// توکن باتی که استفاده میشود
-        /// </summary>
-        public string Token { get; set; }
-        /// <summary>
-        /// لیست افرادی که تابه حال از بات استفاده کرده اند
-        /// </summary>
-        public List<TelUser> Users;
-
         public Informations()
         {
             Description = "";

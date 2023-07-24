@@ -280,8 +280,13 @@
 			quid       	"42A0BF630010")
 		    (object ClassAttribute "FileName"
 			quid       	"42A0BF6702DF")))
-	    (object Class "Informations"
+	    (object Class "Information"
 		quid       	"42A0C19B0129"
+		used_nodes 	(list uses_relationship_list
+		    (object Uses_Relationship
+			quid       	"42A0C22B004E"
+			supplier   	"Logical View::LocalData"
+			quidu      	"42A0C1720203"))
 		operations 	(list Operations
 		    (object Operation "Save"
 			quid       	"42A0C1A80196"
@@ -294,14 +299,8 @@
 			opExportControl 	"Public"
 			uid        	0))
 		class_attributes 	(list class_attribute_list
-		    (object ClassAttribute "AdminSerial"
-			quid       	"42A0C3A603C9")
-		    (object ClassAttribute "Description"
-			quid       	"42A0C39B0281")
-		    (object ClassAttribute "Token"
-			quid       	"42A0C39301E5")
-		    (object ClassAttribute "UsersList"
-			quid       	"42A0C38C036B")))
+		    (object ClassAttribute "SavePath"
+			quid       	"42A0C5C601D4")))
 	    (object Class "MainForm"
 		quid       	"42A0C21500DB"
 		used_nodes 	(list uses_relationship_list
@@ -381,6 +380,25 @@
 			concurrency 	"Sequential"
 			opExportControl 	"Public"
 			uid        	0)))
+	    (object Class "LocalData"
+		quid       	"42A0C1720203"
+		used_nodes 	(list uses_relationship_list
+		    (object Uses_Relationship
+			quid       	"42A0C22D02EE"
+			supplier   	"Logical View::ListBook"
+			quidu      	"42A0C1E3029F"))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "AdminUsername"
+			quid       	"42A0C1BB00DA")
+		    (object ClassAttribute "Token"
+			quid       	"42A0C1BB00DB")
+		    (object ClassAttribute "Description"
+			quid       	"42A0C1BB00EA")))
+	    (object Class "ListBook"
+		quid       	"42A0C1E3029F"
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "UsersList"
+			quid       	"42A0C21E0399")))
 	    (object Class_Category "NewPackage"
 		quid       	"42A0CEBC0252"
 		exportControl 	"Public"
@@ -414,7 +432,7 @@
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(2672, 2689)
+			location   	(2713, 2714)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -426,7 +444,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@1
-			    location   	(2369, 2183)
+			    location   	(2410, 2208)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	606
@@ -438,7 +456,7 @@
 			quidu      	"42A0BE4701A6"
 			compartment 	(object Compartment
 			    Parent_View 	@1
-			    location   	(2369, 2244)
+			    location   	(2410, 2269)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -462,7 +480,7 @@
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(2750, 1397)
+			location   	(2784, 1394)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -474,7 +492,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@2
-			    location   	(2449, 1066)
+			    location   	(2483, 1063)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	602
@@ -486,7 +504,7 @@
 			quidu      	"42A0C9420271"
 			compartment 	(object Compartment
 			    Parent_View 	@2
-			    location   	(2449, 1127)
+			    location   	(2483, 1124)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -521,11 +539,11 @@
 			max_width  	288
 			justify    	1
 			label      	"SCRIPT CORE")
-		    (object ClassView "Class" "Logical View::Informations" @4
+		    (object ClassView "Class" "Logical View::Information" @4
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(2184, 1355)
+			location   	(2176, 1224)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -537,19 +555,19 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@4
-			    location   	(2052, 1149)
+			    location   	(2063, 1093)
 			    fill_color 	13434879
 			    nlines     	1
-			    max_width  	264
+			    max_width  	226
 			    justify    	0
-			    label      	"Informations")
+			    label      	"Information")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"42A0C19B0129"
 			compartment 	(object Compartment
 			    Parent_View 	@4
-			    location   	(2052, 1210)
+			    location   	(2063, 1154)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -562,11 +580,11 @@
 			    icon_style 	"Icon"
 			    fill_color 	13434879
 			    anchor     	2
-			    nlines     	7
-			    max_width  	278
+			    nlines     	4
+			    max_width  	216
 			    justify    	1)
-			width      	282
-			height     	436
+			width      	244
+			height     	286
 			annotation 	8
 			autoResize 	TRUE)
 		    (object ClassView "Class" "Logical View::MainForm" @5
@@ -687,8 +705,8 @@
 			client     	@2
 			supplier   	@1
 			vertices   	(list Points
-			    (2728, 1740)
-			    (2702, 2170))
+			    (2764, 1737)
+			    (2740, 2195))
 			line_style 	0)
 		    (object UsesView "" @9
 			stereotype 	TRUE
@@ -697,14 +715,14 @@
 			client     	@5
 			supplier   	@2
 			vertices   	(list Points
-			    (2818, 616)
-			    (2779, 1053))
+			    (2824, 616)
+			    (2801, 1050))
 			line_style 	0)
 		    (object ClassView "Class" "Logical View::SAVEANDRETRIVE MODULE" @10
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(3806, 2295)
+			location   	(3787, 2262)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -716,7 +734,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@10
-			    location   	(3516, 2244)
+			    location   	(3497, 2211)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	580
@@ -737,8 +755,8 @@
 			client     	@2
 			supplier   	@10
 			vertices   	(list Points
-			    (3060, 1660)
-			    (3732, 2231))
+			    (3094, 1663)
+			    (3714, 2198))
 			line_style 	0)
 		    (object UsesView "" @12
 			stereotype 	TRUE
@@ -747,8 +765,8 @@
 			client     	@1
 			supplier   	@6
 			vertices   	(list Points
-			    (2359, 2562)
-			    (2065, 2444))
+			    (2400, 2584)
+			    (2065, 2446))
 			line_style 	0)
 		    (object CategoryView "Logical View::Telegram.Bot" @13
 			location   	(2667, 3756)
@@ -782,8 +800,8 @@
 			client     	@1
 			supplier   	@13
 			vertices   	(list Points
-			    (2669, 3207)
-			    (2667, 3611))
+			    (2690, 3232)
+			    (2672, 3611))
 			line_style 	0)
 		    (object NoteView @15
 			location   	(3320, 3801)
@@ -809,7 +827,7 @@
 			width      	612
 			height     	263)
 		    (object NoteView @16
-			location   	(1941, 2098)
+			location   	(1885, 2097)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -821,18 +839,18 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@16
-			    location   	(1628, 2026)
+			    location   	(1491, 2019)
 			    fill_color 	13434879
-			    nlines     	2
-			    max_width  	591
+			    nlines     	3
+			    max_width  	753
 			    justify    	1
 			    label      	"TelegramLean core is a high level library for telegram bot requests.")
 			line_color 	3342489
 			fill_color 	13434879
-			width      	651
-			height     	157)
+			width      	813
+			height     	169)
 		    (object NoteView @17
-			location   	(1537, 1197)
+			location   	(950, 941)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -844,7 +862,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@17
-			    location   	(1102, 1110)
+			    location   	(515, 854)
 			    fill_color 	13434879
 			    nlines     	3
 			    max_width  	834
@@ -858,7 +876,7 @@
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(1614, 1466)
+			location   	(3374, 1541)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -870,7 +888,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@18
-			    location   	(1499, 1360)
+			    location   	(3259, 1435)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	230
@@ -882,7 +900,7 @@
 			quidu      	"42A0C0C9037B"
 			compartment 	(object Compartment
 			    Parent_View 	@18
-			    location   	(1499, 1421)
+			    location   	(3259, 1496)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -906,7 +924,7 @@
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(3636, 1178)
+			location   	(3471, 1219)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -918,7 +936,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@19
-			    location   	(3378, 1022)
+			    location   	(3213, 1063)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	516
@@ -930,7 +948,7 @@
 			quidu      	"42A0BE4D0290"
 			compartment 	(object Compartment
 			    Parent_View 	@19
-			    location   	(3378, 1083)
+			    location   	(3213, 1124)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -949,7 +967,123 @@
 			width      	534
 			height     	336
 			annotation 	8
-			autoResize 	TRUE)))))
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::LocalData" @20
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1775, 1225)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@20
+			    location   	(1603, 1094)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	344
+			    justify    	0
+			    label      	"LocalData")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"42A0C1720203"
+			compartment 	(object Compartment
+			    Parent_View 	@20
+			    location   	(1603, 1155)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	4
+			    max_width  	359
+			    justify    	1)
+			width      	362
+			height     	286
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::ListBook" @21
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1310, 1235)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@21
+			    location   	(1201, 1154)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	218
+			    justify    	0
+			    label      	"ListBook")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"42A0C1E3029F"
+			compartment 	(object Compartment
+			    Parent_View 	@21
+			    location   	(1201, 1215)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	2
+			    max_width  	216
+			    justify    	1)
+			width      	236
+			height     	186
+			annotation 	8
+			autoResize 	TRUE)
+		    (object UsesView "" @22
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"42A0C22B004E"
+			client     	@4
+			supplier   	@20
+			vertices   	(list Points
+			    (2053, 1224)
+			    (1956, 1224))
+			line_style 	0)
+		    (object UsesView "" @23
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"42A0C22D02EE"
+			client     	@20
+			supplier   	@21
+			vertices   	(list Points
+			    (1593, 1228)
+			    (1428, 1231))
+			line_style 	0)))))
     root_subsystem 	(object SubSystem "Component View"
 	quid       	"42A0BDF8014B"
 	physical_models 	(list unit_reference_list)
