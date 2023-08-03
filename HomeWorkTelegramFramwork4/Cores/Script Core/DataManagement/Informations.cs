@@ -15,6 +15,7 @@ namespace TelegramHomeWorkBot.Script_Core
             Description = "";
             Token = "";
 
+            Admins = new List<string>();
             Users = new List<TelUser>();
         }
 

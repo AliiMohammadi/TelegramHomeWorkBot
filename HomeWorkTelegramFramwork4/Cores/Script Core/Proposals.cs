@@ -9,12 +9,16 @@ namespace TelegramHomeWorkBot.Script_Core
 {
     internal class Proposals
     {
-        public static void HomeWorkSendRequest(Message homework)
+        public static void HomeWorkSendRequest(Message homework, List<long> adminchatid)
         {
             try
             {
-                Script.Bot.SendMessage(Script.Adminchatid, $"تمرین ارسال شده از طرف: @{homework.Chat.Username} در زمان: {homework.Date}", Script.Bot.ReplyKey);
-                Script.Bot.ForwardMessage(Script.Adminchatid, homework.Chat.Id, homework);
+                foreach(long admin in adminchatid)
+                {
+                    Script.Bot.SendMessage(admin, $"تمرین ارسال شده از طرف: @{homework.Chat.Username} در زمان: {homework.Date}", Script.Bot.ReplyKey);
+                    Script.Bot.ForwardMessage(admin, homework.Chat.Id, homework);
+                }
+
                 Script.Bot.SendMessage(homework.Chat.Id, $"تمرین شما ثبت شد.", Script.Bot.ReplyKey);
             }
             catch (Exception e)

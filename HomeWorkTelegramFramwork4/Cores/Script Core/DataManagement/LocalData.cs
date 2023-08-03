@@ -11,7 +11,7 @@ namespace TelegramHomeWorkBot.Script_Core
         /// <summary>
         /// شماره سریال , شماره چت سرگروه با بات هستش که باید اینجا قرار بگیره
         /// </summary>
-        public string AdminUserName { get; set; }
+        public List<string> Admins { get; set; }
         /// <summary>
         /// اطلاعات , متنی است که هنگامی که کاربر روی دکمه اطلاعات درس کلیک میکند به کاربر میدهد
         /// </summary>

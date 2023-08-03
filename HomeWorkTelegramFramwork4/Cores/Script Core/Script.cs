@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.ReplyMarkups;
@@ -20,7 +22,7 @@ namespace TelegramHomeWorkBot.Script_Core
         /// </summary>
         public static TelegramBot Bot = new TelegramBot("");
 
-        public static long Adminchatid = -1;
+        public static List<long> adminschatid;
 
         /// <summary>
         /// فقط یک بار خوانده شود.
@@ -38,7 +40,7 @@ namespace TelegramHomeWorkBot.Script_Core
 
                 AddReplykeys();
 
-                Adminchatid = GetChatIdOfAdmin();
+                adminschatid = GetChatIdOfAdmin(info.Users, info.Admins);
             }
             catch (Exception e) 
             {
@@ -80,7 +82,7 @@ namespace TelegramHomeWorkBot.Script_Core
         {
             try
             {
-                Proposals.HomeWorkSendRequest(update.Message);
+                Proposals.HomeWorkSendRequest(update.Message,adminschatid);
             }
             catch (Exception e)
             {
@@ -91,10 +93,10 @@ namespace TelegramHomeWorkBot.Script_Core
         {
             try
             {
-                if (Adminchatid == -1)
+                if (adminschatid.Count == 0)
                     System.Windows.Forms.MessageBox.Show("اخطار: ای دی شما در بات ثبت نام نشده. برای حل این مشکل لطفا به بات بروید و دستور /start را وارد کنید تا ثبت نام شوید.");
 
-                Proposals.HomeWorkSendRequest( update.Message);
+                Proposals.HomeWorkSendRequest(update.Message, adminschatid);
 
             }
             catch (Exception e)
@@ -117,23 +119,28 @@ namespace TelegramHomeWorkBot.Script_Core
         {
             info.Users.Add(newuser);
             Informations.SaveInformation(info);
-            Adminchatid = GetChatIdOfAdmin();
+            adminschatid = GetChatIdOfAdmin(info.Users, info.Admins);
 
         }
 
         /// <summary>
-        /// محسابه ای دی چت ادمین با پیدا کردنش از لیست افراد
+        /// محسابه ای دی چت های ادمین ها با پیدا کردنشون از لیست افراد
         /// </summary>
         /// <returns></returns>
-        static long GetChatIdOfAdmin()
+        static List<long> GetChatIdOfAdmin(List<TelUser> users,List<string> admins)
         {
-            foreach (var item in info.Users)
-            {
-                if (string.Equals(item.Username, info.AdminUserName.Replace("@","")))
-                    return item.ChatID;
-            }
+            List<long> foundedadmins = new List<long>();
 
-            return -1;
+            foreach (var user in users)
+            {
+                foreach (var admin in admins)
+                {
+                    if (string.Equals(user.Username, admin.Replace("@", "")))
+                        foundedadmins.Add(user.ChatID);
+                }
+            }
+            
+            return foundedadmins;
         }
     }
 }

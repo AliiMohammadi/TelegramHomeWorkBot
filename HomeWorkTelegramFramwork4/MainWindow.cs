@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using TelegramHomeWorkBot.Script_Core;
 
@@ -29,7 +30,7 @@ namespace TelegramHomeWork
         }
         void ActiveButton_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(Tokentext.Text) || string.IsNullOrEmpty(AdminSerialtext.Text) || string.IsNullOrEmpty(Descriptiontext.Text))
+            if(string.IsNullOrEmpty(Tokentext.Text) || Adminslistbox.Items.Count == 0|| string.IsNullOrEmpty(Descriptiontext.Text))
             {
                 MessageBox.Show("فیلد های بالا نباید خالی باشد. لطفا پرنمایید.");
                 return;
@@ -37,11 +38,7 @@ namespace TelegramHomeWork
 
             if (!Script.Bot.IsActive)
             {
-                Script.info.Token = Tokentext.Text;
-                Script.info.AdminUserName = AdminSerialtext.Text;
-                Script.info.Description = Descriptiontext.Text;
-
-                Informations.SaveInformation(Script.info);
+                SaveInformations();
 
                 Script.Initialaize();
                 Script.Bot.SetActive(true);
@@ -64,7 +61,20 @@ namespace TelegramHomeWork
 
             Tokentext.Text = info.Token;
             Descriptiontext.Text = info.Description;
-            AdminSerialtext.Text = info.AdminUserName;
+
+            foreach (string adminusername in info.Admins)
+            {
+                Adminslistbox.Items.Add(adminusername);
+            }
+        }
+
+        void SaveInformations()
+        {
+            Script.info.Token = Tokentext.Text;
+            Script.info.Admins = Adminslistbox.Items.Cast<string>().ToList();
+            Script.info.Description = Descriptiontext.Text;
+
+            Informations.SaveInformation(Script.info);
         }
 
         void ActiveMode()
@@ -74,6 +84,9 @@ namespace TelegramHomeWork
             Tokentext.Enabled = false;
             AdminSerialtext.Enabled = false;
             Descriptiontext.Enabled = false;
+            Adminslistbox.Enabled = false;
+            Addbtn.Enabled = false;
+            Removebtn.Enabled = false;
         }
         void DiActiveMode()
         {
@@ -82,6 +95,29 @@ namespace TelegramHomeWork
             Tokentext.Enabled = true;
             AdminSerialtext.Enabled = true;
             Descriptiontext.Enabled = true;
+            Adminslistbox.Enabled = true;
+            Addbtn.Enabled = true;
+            Removebtn.Enabled = true;
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(AdminSerialtext.Text))
+                return;
+
+            Adminslistbox.Items.Add(AdminSerialtext.Text);
+            AdminSerialtext.Clear();
+            SaveInformations();
+        }
+
+        private void RemoveButton_Click(object sender, EventArgs e)
+        {
+            if (Adminslistbox.SelectedIndex < 0)
+                return;
+
+            Adminslistbox.Items.RemoveAt(Adminslistbox.SelectedIndex);
+            SaveInformations();
+
         }
     }
 }
