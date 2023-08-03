@@ -66,9 +66,9 @@
     <Compile Include="Cores\SaveAndRetrieve Core\JsonSaveData.cs" />
     <Compile Include="Cores\SaveAndRetrieve Core\JSonSingleObject\SaveSystem.cs" />
     <Compile Include="Cores\SaveAndRetrieve Core\JSonSingleObject\SimpleJson.cs" />
-    <Compile Include="Cores\Script Core\Informations.cs" />
-    <Compile Include="Cores\Script Core\ListBook.cs" />
-    <Compile Include="Cores\Script Core\LocalData.cs" />
+    <Compile Include="Cores\Script Core\DataManagement\Informations.cs" />
+    <Compile Include="Cores\Script Core\DataManagement\ListBook.cs" />
+    <Compile Include="Cores\Script Core\DataManagement\LocalData.cs" />
     <Compile Include="Cores\Script Core\Proposals.cs" />
     <Compile Include="Cores\Script Core\Script.cs" />
     <Compile Include="Cores\Script Core\TelUser.cs" />
