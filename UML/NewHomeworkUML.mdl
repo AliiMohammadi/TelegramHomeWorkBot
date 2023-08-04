@@ -48,7 +48,7 @@
 	    tool       	"Java"
 	    name       	"UserDefineTagApply3"
 	    value      	""))
-    quid       	"42A0BDF80148"
+    quid       	"42A0BDDA01D5"
     enforceClosureAutoLoad 	FALSE
     defaults   	(object defaults
 	rightMargin 	0.250000
@@ -91,6 +91,47 @@
 		origin_y   	0
 		items      	(list diagram_item_list))))
     root_category 	(object Class_Category "Logical View"
+	attributes 	(list Attribute_Set
+	    (object Attribute
+		tool       	"Java"
+		name       	"IDE"
+		value      	"Internal Editor")
+	    (object Attribute
+		tool       	"Java"
+		name       	"UserDefineTagName1"
+		value      	"")
+	    (object Attribute
+		tool       	"Java"
+		name       	"UserDefineTagText1"
+		value      	"")
+	    (object Attribute
+		tool       	"Java"
+		name       	"UserDefineTagApply1"
+		value      	"")
+	    (object Attribute
+		tool       	"Java"
+		name       	"UserDefineTagName2"
+		value      	"")
+	    (object Attribute
+		tool       	"Java"
+		name       	"UserDefineTagText2"
+		value      	"")
+	    (object Attribute
+		tool       	"Java"
+		name       	"UserDefineTagApply2"
+		value      	"")
+	    (object Attribute
+		tool       	"Java"
+		name       	"UserDefineTagName3"
+		value      	"")
+	    (object Attribute
+		tool       	"Java"
+		name       	"UserDefineTagText3"
+		value      	"")
+	    (object Attribute
+		tool       	"Java"
+		name       	"UserDefineTagApply3"
+		value      	""))
 	quid       	"42A0BDF80149"
 	exportControl 	"Public"
 	global     	TRUE
@@ -399,6 +440,16 @@
 		class_attributes 	(list class_attribute_list
 		    (object ClassAttribute "UsersList"
 			quid       	"42A0C21E0399")))
+	    (object Class "MainPanel"
+		quid       	"42A0BDE6031D")
+	    (object Class "OptionsUC"
+		quid       	"42A0BDF503C9")
+	    (object Class "UsersUC"
+		quid       	"42A0BE0800EB")
+	    (object Class "AdminsUC"
+		quid       	"42A0BE100158")
+	    (object Class "PanelManager"
+		quid       	"42A0BE220168")
 	    (object Class_Category "NewPackage"
 		quid       	"42A0CEBC0252"
 		exportControl 	"Public"
@@ -876,7 +927,7 @@
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(3292, 1530)
+			location   	(3348, 1533)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -888,7 +939,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@18
-			    location   	(3177, 1424)
+			    location   	(3233, 1427)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	230
@@ -900,7 +951,7 @@
 			quidu      	"42A0C0C9037B"
 			compartment 	(object Compartment
 			    Parent_View 	@18
-			    location   	(3177, 1485)
+			    location   	(3233, 1488)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -1083,7 +1134,172 @@
 			vertices   	(list Points
 			    (1511, 1217)
 			    (1346, 1220))
-			line_style 	0)))))
+			line_style 	0)
+		    (object ClassView "Class" "Logical View::MainPanel" @24
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(3909, 478)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@24
+			    location   	(3795, 427)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	228
+			    justify    	0
+			    label      	"MainPanel")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"42A0BDE6031D"
+			width      	246
+			height     	126
+			annotation 	8
+			autoResize 	TRUE)
+		    (object NoteView @25
+			location   	(150, 344)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			line_color 	3342489
+			fill_color 	13434879
+			width      	300
+			height     	132)
+		    (object ClassView "Class" "Logical View::OptionsUC" @26
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2210, 422)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@26
+			    location   	(2091, 371)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	238
+			    justify    	0
+			    label      	"OptionsUC")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"42A0BDF503C9"
+			width      	256
+			height     	126
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::UsersUC" @27
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1885, 444)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@27
+			    location   	(1781, 393)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	208
+			    justify    	0
+			    label      	"UsersUC")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"42A0BE0800EB"
+			width      	226
+			height     	126
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::AdminsUC" @28
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(3420, 450)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@28
+			    location   	(3302, 399)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	236
+			    justify    	0
+			    label      	"AdminsUC")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"42A0BE100158"
+			width      	254
+			height     	126
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::PanelManager" @29
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1575, 456)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@29
+			    location   	(1430, 405)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	290
+			    justify    	0
+			    label      	"PanelManager")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"42A0BE220168"
+			width      	308
+			height     	126
+			annotation 	8
+			autoResize 	TRUE)))))
     root_subsystem 	(object SubSystem "Component View"
 	quid       	"42A0BDF8014B"
 	physical_models 	(list unit_reference_list)

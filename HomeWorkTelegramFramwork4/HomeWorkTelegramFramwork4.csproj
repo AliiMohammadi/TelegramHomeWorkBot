@@ -74,6 +74,7 @@
     <Compile Include="Cores\Script Core\TelUser.cs" />
     <Compile Include="Cores\Telegram Lean Core\TelBotInfo.cs" />
     <Compile Include="Cores\Telegram Lean Core\TelegramBot.cs" />
+    <Compile Include="Cores\UserInterface\PanelControler.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +83,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usercontroles\AdminControlUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontroles\AdminControlUC.Designer.cs">
+      <DependentUpon>AdminControlUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontroles\MainPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontroles\MainPanel.Designer.cs">
+      <DependentUpon>MainPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontroles\OptionsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontroles\OptionsUC.Designer.cs">
+      <DependentUpon>OptionsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontroles\UsersControlUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontroles\UsersControlUC.Designer.cs">
+      <DependentUpon>UsersControlUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +119,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Usercontroles\AdminControlUC.resx">
+      <DependentUpon>AdminControlUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontroles\MainPanel.resx">
+      <DependentUpon>MainPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontroles\OptionsUC.resx">
+      <DependentUpon>OptionsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontroles\UsersControlUC.resx">
+      <DependentUpon>UsersControlUC.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -108,5 +145,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

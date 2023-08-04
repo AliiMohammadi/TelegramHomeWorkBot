@@ -20,7 +20,6 @@ C:\Users\msi PC\Desktop\HomeWorkTelegramFramwork4\HomeWorkTelegramFramwork4\bin\
 C:\Users\msi PC\Desktop\HomeWorkTelegramFramwork4\HomeWorkTelegramFramwork4\obj\Debug\HomeWorkTelegramFramwork4.csproj.CopyComplete
 C:\Users\msi PC\Desktop\HomeWorkTelegramFramwork4\HomeWorkTelegramFramwork4\obj\Debug\HomeWorkTelegramFramwork4.exe
 C:\Users\msi PC\Desktop\HomeWorkTelegramFramwork4\HomeWorkTelegramFramwork4\obj\Debug\HomeWorkTelegramFramwork4.pdb
-D:\Developing\Application Projects\HomeWorkTelegramFramwork4\HomeWorkTelegramFramwork4\obj\Debug\HomeWorkTelegramFramwork4.csproj.AssemblyReference.cache
 D:\Developing\Application Projects\HomeWorkTelegramFramwork4\HomeWorkTelegramFramwork4\obj\Debug\HomeWorkTelegramFramwork4.csproj.SuggestedBindingRedirects.cache
 D:\Developing\Application Projects\HomeWorkTelegramFramwork4\HomeWorkTelegramFramwork4\obj\Debug\TelegramHomeWork.MainWindow.resources
 D:\Developing\Application Projects\HomeWorkTelegramFramwork4\HomeWorkTelegramFramwork4\obj\Debug\HomeWorkTelegramFramwork4.Properties.Resources.resources
@@ -42,3 +41,8 @@ D:\Developing\Application Projects\HomeWorkTelegramFramwork4\HomeWorkTelegramFra
 D:\Developing\Application Projects\HomeWorkTelegramFramwork4\HomeWorkTelegramFramwork4\bin\Debug\Telegram.Bot.pdb
 D:\Developing\Application Projects\HomeWorkTelegramFramwork4\HomeWorkTelegramFramwork4\bin\Debug\Telegram.Bot.xml
 D:\Developing\Application Projects\HomeWorkTelegramFramwork4\HomeWorkTelegramFramwork4\obj\Debug\HomeWorkTelegramFramwork4.csproj.CopyComplete
+D:\Developing\Application Projects\HomeWorkTelegramFramwork4\HomeWorkTelegramFramwork4\obj\Debug\Usercontroles.AdminControlUC.resources
+D:\Developing\Application Projects\HomeWorkTelegramFramwork4\HomeWorkTelegramFramwork4\obj\Debug\Usercontroles.OptionsUC.resources
+D:\Developing\Application Projects\HomeWorkTelegramFramwork4\HomeWorkTelegramFramwork4\obj\Debug\Usercontroles.UsersControlUC.resources
+D:\Developing\Application Projects\HomeWorkTelegramFramwork4\HomeWorkTelegramFramwork4\obj\Debug\Usercontroles.MainPanel.resources
+D:\Developing\Application Projects\HomeWorkTelegramFramwork4\HomeWorkTelegramFramwork4\obj\Debug\HomeWorkTelegramFramwork4.csproj.AssemblyReference.cache

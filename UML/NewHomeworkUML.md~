@@ -48,7 +48,7 @@
 	    tool       	"Java"
 	    name       	"UserDefineTagApply3"
 	    value      	""))
-    quid       	"42A0BDF80148"
+    quid       	"42A0BDDA01D5"
     enforceClosureAutoLoad 	FALSE
     defaults   	(object defaults
 	rightMargin 	0.250000
@@ -91,6 +91,47 @@
 		origin_y   	0
 		items      	(list diagram_item_list))))
     root_category 	(object Class_Category "Logical View"
+	attributes 	(list Attribute_Set
+	    (object Attribute
+		tool       	"Java"
+		name       	"IDE"
+		value      	"Internal Editor")
+	    (object Attribute
+		tool       	"Java"
+		name       	"UserDefineTagName1"
+		value      	"")
+	    (object Attribute
+		tool       	"Java"
+		name       	"UserDefineTagText1"
+		value      	"")
+	    (object Attribute
+		tool       	"Java"
+		name       	"UserDefineTagApply1"
+		value      	"")
+	    (object Attribute
+		tool       	"Java"
+		name       	"UserDefineTagName2"
+		value      	"")
+	    (object Attribute
+		tool       	"Java"
+		name       	"UserDefineTagText2"
+		value      	"")
+	    (object Attribute
+		tool       	"Java"
+		name       	"UserDefineTagApply2"
+		value      	"")
+	    (object Attribute
+		tool       	"Java"
+		name       	"UserDefineTagName3"
+		value      	"")
+	    (object Attribute
+		tool       	"Java"
+		name       	"UserDefineTagText3"
+		value      	"")
+	    (object Attribute
+		tool       	"Java"
+		name       	"UserDefineTagApply3"
+		value      	""))
 	quid       	"42A0BDF80149"
 	exportControl 	"Public"
 	global     	TRUE
@@ -480,7 +521,7 @@
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(2784, 1394)
+			location   	(2702, 1383)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -492,7 +533,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@2
-			    location   	(2483, 1063)
+			    location   	(2401, 1052)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	602
@@ -504,7 +545,7 @@
 			quidu      	"42A0C9420271"
 			compartment 	(object Compartment
 			    Parent_View 	@2
-			    location   	(2483, 1124)
+			    location   	(2401, 1113)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -518,14 +559,14 @@
 			    fill_color 	13434879
 			    anchor     	2
 			    nlines     	12
-			    max_width  	600
+			    max_width  	628
 			    justify    	1)
 			width      	620
 			height     	686
 			annotation 	8
 			autoResize 	TRUE)
 		    (object Label @3
-			location   	(2644, 907)
+			location   	(2562, 896)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -543,7 +584,7 @@
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(2176, 1224)
+			location   	(2094, 1213)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -555,7 +596,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@4
-			    location   	(2063, 1093)
+			    location   	(1981, 1082)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	226
@@ -567,7 +608,7 @@
 			quidu      	"42A0C19B0129"
 			compartment 	(object Compartment
 			    Parent_View 	@4
-			    location   	(2063, 1154)
+			    location   	(1981, 1143)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -581,7 +622,7 @@
 			    fill_color 	13434879
 			    anchor     	2
 			    nlines     	4
-			    max_width  	216
+			    max_width  	231
 			    justify    	1)
 			width      	244
 			height     	286
@@ -591,7 +632,7 @@
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(2834, 448)
+			location   	(2705, 550)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -603,7 +644,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@5
-			    location   	(2627, 292)
+			    location   	(2498, 394)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	414
@@ -615,7 +656,7 @@
 			quidu      	"42A0C21500DB"
 			compartment 	(object Compartment
 			    Parent_View 	@5
-			    location   	(2627, 353)
+			    location   	(2498, 455)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -705,8 +746,8 @@
 			client     	@2
 			supplier   	@1
 			vertices   	(list Points
-			    (2764, 1737)
-			    (2740, 2195))
+			    (2704, 1726)
+			    (2707, 2195))
 			line_style 	0)
 		    (object UsesView "" @9
 			stereotype 	TRUE
@@ -715,8 +756,8 @@
 			client     	@5
 			supplier   	@2
 			vertices   	(list Points
-			    (2824, 616)
-			    (2801, 1050))
+			    (2704, 718)
+			    (2702, 1039))
 			line_style 	0)
 		    (object ClassView "Class" "Logical View::SAVEANDRETRIVE MODULE" @10
 			ShowCompartmentStereotypes 	TRUE
@@ -755,8 +796,8 @@
 			client     	@2
 			supplier   	@10
 			vertices   	(list Points
-			    (3094, 1663)
-			    (3714, 2198))
+			    (3012, 1634)
+			    (3708, 2198))
 			line_style 	0)
 		    (object UsesView "" @12
 			stereotype 	TRUE
@@ -850,7 +891,7 @@
 			width      	813
 			height     	169)
 		    (object NoteView @17
-			location   	(950, 941)
+			location   	(1862, 948)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -862,7 +903,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@17
-			    location   	(515, 854)
+			    location   	(1427, 861)
 			    fill_color 	13434879
 			    nlines     	3
 			    max_width  	834
@@ -876,7 +917,7 @@
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(3374, 1541)
+			location   	(3348, 1533)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -888,7 +929,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@18
-			    location   	(3259, 1435)
+			    location   	(3233, 1427)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	230
@@ -900,7 +941,7 @@
 			quidu      	"42A0C0C9037B"
 			compartment 	(object Compartment
 			    Parent_View 	@18
-			    location   	(3259, 1496)
+			    location   	(3233, 1488)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -924,7 +965,7 @@
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(3471, 1219)
+			location   	(3389, 1208)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -936,7 +977,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@19
-			    location   	(3213, 1063)
+			    location   	(3131, 1052)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	516
@@ -948,7 +989,7 @@
 			quidu      	"42A0BE4D0290"
 			compartment 	(object Compartment
 			    Parent_View 	@19
-			    location   	(3213, 1124)
+			    location   	(3131, 1113)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -962,7 +1003,7 @@
 			    fill_color 	13434879
 			    anchor     	2
 			    nlines     	5
-			    max_width  	513
+			    max_width  	537
 			    justify    	1)
 			width      	534
 			height     	336
@@ -972,7 +1013,7 @@
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(1775, 1225)
+			location   	(1693, 1214)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -984,7 +1025,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@20
-			    location   	(1603, 1094)
+			    location   	(1521, 1083)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	344
@@ -996,7 +1037,7 @@
 			quidu      	"42A0C1720203"
 			compartment 	(object Compartment
 			    Parent_View 	@20
-			    location   	(1603, 1155)
+			    location   	(1521, 1144)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -1020,7 +1061,7 @@
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(1310, 1235)
+			location   	(1228, 1224)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -1032,7 +1073,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@21
-			    location   	(1201, 1154)
+			    location   	(1119, 1143)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	218
@@ -1044,7 +1085,7 @@
 			quidu      	"42A0C1E3029F"
 			compartment 	(object Compartment
 			    Parent_View 	@21
-			    location   	(1201, 1215)
+			    location   	(1119, 1204)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -1058,7 +1099,7 @@
 			    fill_color 	13434879
 			    anchor     	2
 			    nlines     	2
-			    max_width  	216
+			    max_width  	231
 			    justify    	1)
 			width      	236
 			height     	186
@@ -1071,8 +1112,8 @@
 			client     	@4
 			supplier   	@20
 			vertices   	(list Points
-			    (2053, 1224)
-			    (1956, 1224))
+			    (1971, 1213)
+			    (1874, 1213))
 			line_style 	0)
 		    (object UsesView "" @23
 			stereotype 	TRUE
@@ -1081,8 +1122,8 @@
 			client     	@20
 			supplier   	@21
 			vertices   	(list Points
-			    (1593, 1228)
-			    (1428, 1231))
+			    (1511, 1217)
+			    (1346, 1220))
 			line_style 	0)))))
     root_subsystem 	(object SubSystem "Component View"
 	quid       	"42A0BDF8014B"
