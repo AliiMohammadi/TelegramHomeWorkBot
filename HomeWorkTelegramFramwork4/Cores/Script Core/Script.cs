@@ -6,6 +6,7 @@ using Telegram.Bot.Types;
 using Telegram.Bot.Types.ReplyMarkups;
 using TelegramLean;
 
+
 namespace TelegramHomeWorkBot.Script_Core
 {
     /// <summary>
@@ -64,12 +65,18 @@ namespace TelegramHomeWorkBot.Script_Core
         {
             try
             {
-                if (update.Message.Text == "اطلاعات درس")
+                string textmessage = update.Message.Text;
+
+                if (textmessage == "اطلاعات درس")
                     Proposals.StudyInformationRequest(update.Message.Chat.Id);
-                else if (update.Message.Text == "/start")
+                else if (ItIsRequest(textmessage, "/start"))
                     Proposals.ChatInformationRequest(update.Message.Chat.Id);
-                else if (update.Message.Text == "/code")
+                else if (ItIsRequest(textmessage, "/code") )
                     Proposals.SourceCodeRequest(update.Message.Chat.Id);
+                else if (ItIsRequest(textmessage , "/to "))
+                    Proposals.LeaveFeedBackTo(update.Message.Chat.Id, textmessage);
+                else if (ItIsRequest(textmessage, "/toall "))
+                    Proposals.SendMessageToAllUsers(update.Message.Chat.Id, textmessage);
                 else
                     Bot.SendMessage(update.Message.Chat.Id, ".تمرین رو به صورت فایل یکجا بفرستید. متن قابل قبول نیست", Bot.ReplyKey);
             }
@@ -121,6 +128,15 @@ namespace TelegramHomeWorkBot.Script_Core
             Informations.SaveInformation(info);
             adminschatid = GetChatIdOfAdmin(info.Users, info.Admins);
 
+        }
+        static bool ItIsRequest(string message,string command)
+        {
+            string text = string.Copy(message);
+
+            if(message.Length == command.Length)
+                return (string.Equals(text, command));
+            else
+                return (string.Equals(text.Remove(command.Length), command));
         }
 
         /// <summary>

@@ -13,7 +13,7 @@ namespace TelegramHomeWorkBot.Script_Core
         {
             try
             {
-                foreach(long admin in adminchatid)
+                foreach (long admin in adminchatid)
                 {
                     Script.Bot.SendMessage(admin, $"تمرین ارسال شده از طرف: @{homework.Chat.Username} در زمان: {homework.Date}", Script.Bot.ReplyKey);
                     Script.Bot.ForwardMessage(admin, homework.Chat.Id, homework);
@@ -39,6 +39,68 @@ namespace TelegramHomeWorkBot.Script_Core
         {
             //source code = https://github.com/AliiMohammadi/TelegramHomeWorkBot
             Script.Bot.SendMessage(chatid, "سورس کد این بات: \r\n https://github.com/AliiMohammadi/TelegramHomeWorkBot", Script.Bot.ReplyKey);
+        }
+        public static void LeaveFeedBackTo(long chatid, string message)
+        {
+            try
+            {
+                if (!IsAdmin(chatid))
+                    return; // Users do not have premission to send feed back to others.
+
+                char[] separators = new char[] { ' ' };
+                string[] commandparts = string.Copy(message).Split(separators);
+
+                if (!string.Equals(commandparts[0], "/to") || !commandparts[1].Contains('@'))
+                    return;
+
+                //commandparts[0] دستور
+                //commandparts[1] یوزر دریافت کننده
+
+                string Cleanmessage = string.Copy(message).Replace("/to", "").Replace(commandparts[1], "");
+
+                TelUser user = Script.info.GetUserByUsername(commandparts[1]);
+
+                Script.Bot.SendMessage(user.ChatID, $"پیام از طرف سرگروه به شما : \r\n {Cleanmessage}", Script.Bot.ReplyKey);
+                Script.Bot.SendMessage(chatid, $"پیغام شما به {commandparts[1]} ارسال شد.", Script.Bot.ReplyKey);
+            }
+            catch (Exception e)
+            {
+                Script.Bot.SendMessage(chatid, $"خطای برنامه نویسی: \r\n {e.Message}", Script.Bot.ReplyKey);
+            }
+        }
+        public static void SendMessageToAllUsers(long chatid, string message)
+        {
+            try
+            {
+                if (!IsAdmin(chatid))
+                    return; // Users do not have premission to send feed back to others.
+
+
+                if (!string.Equals(string.Copy(message).Substring(0,7), "/toall "))
+                    return;
+
+                //commandparts[0] دستور
+                //commandparts[1] یوزر دریافت کننده
+
+                string Cleanmessage = string.Copy(message).Replace("/toall ", "");
+
+                foreach (TelUser user in Script.info.Users)
+                {
+                    if(!IsAdmin(user.ChatID))
+                        Script.Bot.SendMessage(user.ChatID, $"پیام از طرف سرگروه به همه : \r\n {Cleanmessage}", Script.Bot.ReplyKey);
+                }
+
+                Script.Bot.SendMessage(chatid, $"پیام شما به همه کابرها ارسال شد.", Script.Bot.ReplyKey);
+            }
+            catch (Exception e)
+            {
+                Script.Bot.SendMessage(chatid, $"خطای برنامه نویسی: \r\n {e.Message}", Script.Bot.ReplyKey);
+            }
+        }
+
+        static bool IsAdmin(long chatid)
+        {
+            return Script.adminschatid.Contains(chatid);
         }
     }
 }
